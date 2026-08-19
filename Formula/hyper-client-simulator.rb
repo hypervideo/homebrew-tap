@@ -1,15 +1,15 @@
 class HyperClientSimulator < Formula
   desc "A Rust TUI for simulating Chromium-backed browser participants against hyper.video sessions."
   homepage "https://github.com/hypervideo/browser-simulator"
-  version "0.4.1"
+  version "0.4.2"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/hypervideo/browser-simulator/releases/download/v0.4.1/hyper-client-simulator-aarch64-apple-darwin.tar.xz"
-      sha256 "1ecd457647b2f33da337fae322d31d28c00517ff991e5ab88192433ec8337381"
+      url "https://github.com/hypervideo/browser-simulator/releases/download/v0.4.2/hyper-client-simulator-aarch64-apple-darwin.tar.xz"
+      sha256 "3d3a15c7cdcc9f365025b8f6693d3496c0bc31f6d7ad7ba1999f076abe2898c6"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/hypervideo/browser-simulator/releases/download/v0.4.1/hyper-client-simulator-x86_64-apple-darwin.tar.xz"
-      sha256 "1c291de83f7c96dd99e1bd06c21c175cef62793efb6dd5d12cf71652547fee63"
+      url "https://github.com/hypervideo/browser-simulator/releases/download/v0.4.2/hyper-client-simulator-x86_64-apple-darwin.tar.xz"
+      sha256 "38e62e64a3c7a61233d04b17be54bcafd14c40c75f2dd745840b774459d49e21"
     end
   end
 
@@ -34,8 +34,12 @@ class HyperClientSimulator < Formula
   end
 
   def install
-    bin.install "hyper-client-simulator" if OS.mac? && Hardware::CPU.arm?
-    bin.install "hyper-client-simulator" if OS.mac? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "hyper-client-simulator"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "hyper-client-simulator"
+    end
 
     install_binary_aliases!
 
