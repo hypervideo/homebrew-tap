@@ -1,15 +1,15 @@
 class HyperClientSimulator < Formula
   desc "A Rust TUI for simulating Chromium-backed browser participants against hyper.video sessions."
   homepage "https://github.com/hypervideo/browser-simulator"
-  version "0.6.0"
+  version "0.6.1"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/hypervideo/browser-simulator/releases/download/v0.6.0/hyper-client-simulator-aarch64-apple-darwin.tar.xz"
-      sha256 "b513046010daa05e111698fe75280d5d87f1b9e00c11d97fc1c9424c62700d7d"
+      url "https://github.com/hypervideo/browser-simulator/releases/download/v0.6.1/hyper-client-simulator-aarch64-apple-darwin.tar.xz"
+      sha256 "641762e42a234476a458ed4cab342c2c679481853f2dbb0172dcfa3429803c2a"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/hypervideo/browser-simulator/releases/download/v0.6.0/hyper-client-simulator-x86_64-apple-darwin.tar.xz"
-      sha256 "c0e7961b87d9f82f6e953ce9f568021cd6289d6d1a86e6626a157e07f015ed15"
+      url "https://github.com/hypervideo/browser-simulator/releases/download/v0.6.1/hyper-client-simulator-x86_64-apple-darwin.tar.xz"
+      sha256 "7adcdee3da2fdc518b52850b246360a2daa5409b7d4ee47fa8efd34e8b9d229d"
     end
   end
 
