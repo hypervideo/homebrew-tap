@@ -1,17 +1,18 @@
 class HyperClientSimulator < Formula
   desc "A Rust TUI for simulating Chromium-backed browser participants against hyper.video sessions."
   homepage "https://github.com/hypervideo/browser-simulator"
-  version "0.6.1"
+  version "0.6.2"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/hypervideo/browser-simulator/releases/download/v0.6.1/hyper-client-simulator-aarch64-apple-darwin.tar.xz"
-      sha256 "641762e42a234476a458ed4cab342c2c679481853f2dbb0172dcfa3429803c2a"
+      url "https://github.com/hypervideo/browser-simulator/releases/download/v0.6.2/hyper-client-simulator-aarch64-apple-darwin.tar.xz"
+      sha256 "e15f037311457d1d48dac36a4a4158811286056c7e72ee69b3aab82a6811ecf8"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/hypervideo/browser-simulator/releases/download/v0.6.1/hyper-client-simulator-x86_64-apple-darwin.tar.xz"
-      sha256 "7adcdee3da2fdc518b52850b246360a2daa5409b7d4ee47fa8efd34e8b9d229d"
+      url "https://github.com/hypervideo/browser-simulator/releases/download/v0.6.2/hyper-client-simulator-x86_64-apple-darwin.tar.xz"
+      sha256 "9472031b911fa89382647ecdb96e93632fe7d61183fdf0d364e5fe7b7d6d75dd"
     end
   end
+  depends_on "ffmpeg"
 
   BINARY_ALIASES = {
     "aarch64-apple-darwin": {},
